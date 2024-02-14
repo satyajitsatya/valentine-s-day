@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding:0px;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+body{
+       height: 100%;
+       width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+}
+#wishing{
+    font-size: 5vw;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    
+    
+
+}
+#wishing:before{
+    content: " ";
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent 0%,#000 5%,#000 100%);
+    animation: animate 5.5s linear forwards;
+    animation-delay: 2s;
+    
+}
+#wishing span {
+    color: red;
+}
+@keyframes animate{
+    0%{
+      left: 110%;  
+    }
+    100%{
+        left:-20% ;
+    }
+}
+video{
+    position: absolute;
+    top: o;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+#massage{
+    font-size: 4vw;
+}
+#option{
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    display: none;
+    /* position: relative;
+    top: 150px; */
+    /* display: block; */
+}
+#option  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* animation: heart 2s linear infinite; */
+}
+@media only screen and (max-width:500px) {
+    #wishing{
+        font-size: 7vw;
+    }
+    #wishing:before{
+        animation-delay: 2.3s;
+    }
+}
